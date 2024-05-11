@@ -38,11 +38,6 @@ alias rs="neomutt -F $HOME/.config/neomutt/accounts/rapidstream.muttrc"
 # Zsh configurations            #
 #################################
 
-# Install Oh My Zsh if it is not installed
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
 # Load Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"

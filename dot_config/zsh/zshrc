@@ -1,0 +1,64 @@
+#################################
+# macOS specific configurations #
+#################################
+
+if [ -d /opt/homebrew ]; then
+  # Homebrew environments
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export HOMEBREW_NO_ENV_HINTS=true
+
+  # Path to Homebrew's installed packages
+  export PATH=/usr/local/bin:$PATH
+  export PATH=$HOME/Library/Python/3.12/bin:$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$HOMEBREW_PREFIX/opt/ruby/bin:$HOMEBREW_PREFIX/lib/ruby/gems/3.3.0/bin:$PATH
+
+  # Disable safe fork mode so that Python does not crash
+  export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+fi
+
+#################################
+# Common configurations         #
+#################################
+
+export EDITOR='vim'
+export PATH=$HOME/.local/bin:$PATH
+
+# 😈 Alias
+alias vim="nvim"
+alias mutt="neomutt"
+alias python="python3"
+alias pip="python3 -m pip"
+alias pip3="python3 -m pip"
+
+# 🐱 Alias
+alias ov="vim -c AirLatex"
+alias pm="neomutt -F $HOME/.config/neomutt/accounts/protonmail.muttrc"
+alias rs="neomutt -F $HOME/.config/neomutt/accounts/rapidstream.muttrc"
+
+#################################
+# Zsh configurations            #
+#################################
+
+# Install Oh My Zsh if it is not installed
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# Load Oh My Zsh
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_THEME="robbyrussell"
+export COMPLETION_WAITING_DOTS="false"
+source $HOME/.config/zsh/mocha.zsh
+zstyle ':omz:update' mode auto
+plugins=(git zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+#################################
+# Kitten configurations         #
+#################################
+
+if command -v kitten &> /dev/null; then
+  alias diff="kitten diff"
+  alias icat="kitten icat"
+  alias ssh="kitten ssh"
+fi
+

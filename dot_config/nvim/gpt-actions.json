@@ -1,0 +1,35 @@
+{
+  "paper_polishment": {
+    "type": "chat",
+    "opts": {
+      "template": "You are a professional academic researcher. Please this to be (1) of professional quality for a top-tier conference, (2) informational, (3) without fancy words or bullshits, (4) concise, clear and conveying, (5) coherent, logical and fluent, and (6) use terms correctly. Keep about the same length and the same format (such as LaTex or Markdown) and do not add additional information:\n\n{{input}}",
+      "strategy": "append",
+      "params": {
+        "model": "gpt-4-turbo",
+        "temperature": 0
+      }
+    }
+  },
+  "grammar_correction": {
+    "type": "chat",
+    "opts": {
+      "template": "Correct ONLY the grammar of this with MINIMAL changes. Keep the same format (such as LaTex or Markdown):\n\n{{input}}",
+      "strategy": "replace",
+      "params": {
+        "model": "gpt-4-turbo",
+        "temperature": 0
+      }
+    }
+  },
+  "remove_bullshit": {
+    "type": "chat",
+    "opts": {
+      "template": "Make this text concise without losing any information. Keep the same format (such as LaTex or Markdown):\n\n{{input}}",
+      "strategy": "replace",
+      "params": {
+        "model": "gpt-4-turbo",
+        "temperature": 0
+      }
+    }
+  }
+}

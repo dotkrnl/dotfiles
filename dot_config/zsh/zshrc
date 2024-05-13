@@ -1,3 +1,5 @@
+source /etc/profile
+
 #################################
 # macOS specific configurations #
 #################################
@@ -33,6 +35,10 @@ alias pip3="python3 -m pip"
 alias ov="vim -c AirLatex"
 alias pm="neomutt -F $HOME/.config/neomutt/accounts/protonmail.muttrc"
 alias rs="neomutt -F $HOME/.config/neomutt/accounts/rapidstream.muttrc"
+
+alias ccommit="chezmoi re-add; chezmoi git add .; chezmoi git commit"
+alias cpush="chezmoi git push"
+alias capply="chezmoi update --apply"
 
 #################################
 # Zsh configurations            #

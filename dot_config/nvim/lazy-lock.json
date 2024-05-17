@@ -10,6 +10,7 @@
   "kitty-scrollback.nvim": { "branch": "main", "commit": "22f524f1fa9c7660804a1800ed0fe981c5d392c8" },
   "lazy.nvim": { "branch": "main", "commit": "e44636a43376e8a1e851958f7e9cbe996751d59f" },
   "leap.nvim": { "branch": "main", "commit": "be68eec21e37415d15cffaabc959b8d3f9466665" },
+  "lsp_lines.nvim": { "branch": "main", "commit": "6f3defec73f7c87939e800e9afa5d0571b19b401" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "9ae570e206360e47d30b4c35a4550c165f4ea7b7" },
   "mason.nvim": { "branch": "main", "commit": "49ff59aded1047a773670651cfa40e76e63c6377" },

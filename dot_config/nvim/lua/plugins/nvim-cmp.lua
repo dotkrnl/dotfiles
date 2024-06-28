@@ -10,6 +10,7 @@ return {
 		"hrsh7th/cmp-cmdline",
 		"hrsh7th/nvim-cmp",
 		"lukas-reineke/cmp-under-comparator",
+		"roobert/tailwindcss-colorizer-cmp.nvim",
 	},
 	setup = function()
 		local cmp = require("cmp")
@@ -64,5 +65,10 @@ return {
 			}),
 			matching = { disallow_symbol_nonprefix_matching = false },
 		})
+
+		-- Setup tailwindcss colorizer
+		cmp.config.formatting = {
+			format = require("tailwindcss-colorizer-cmp").format,
+		}
 	end,
 }

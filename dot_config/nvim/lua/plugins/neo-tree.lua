@@ -38,6 +38,5 @@ return {
 				width = 20,
 			},
 		})
-		vim.keymap.set("n", "td", ":Neotree reveal<CR>", { silent = true })
 	end,
 }

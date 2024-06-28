@@ -13,7 +13,8 @@ return {
 					dim_context = true,
 					alt_background = true,
 				},
-				notifier = true,
+				fidget = true,
+				which_key = true,
 			},
 		})
 		vim.cmd.colorscheme("catppuccin")

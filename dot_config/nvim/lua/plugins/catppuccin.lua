@@ -14,6 +14,7 @@ return {
 					alt_background = true,
 				},
 				cmp = true,
+				diffview = true,
 				fidget = true,
 				leap = true,
 				markdown = true,

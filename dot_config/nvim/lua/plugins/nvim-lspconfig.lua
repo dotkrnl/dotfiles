@@ -25,18 +25,28 @@ return {
 		})
 
 		local lspconfig = require("lspconfig")
-		lspconfig.cssls.setup({})
-		lspconfig.eslint.setup({ root_dir = lspconfig.util.root_pattern("package.json") })
-		lspconfig.html.setup({})
-		lspconfig.htmx.setup({ root_dir = lspconfig.util.root_pattern("package.json") })
-		lspconfig.lua_ls.setup({ settings = { Lua = { diagnostics = { globals = { "vim" } } } } })
-		lspconfig.pyright.setup({ root_dir = lspconfig.util.root_pattern("pyproject.toml") })
-		lspconfig.quick_lint_js.setup({})
-		lspconfig.ruff.setup({ root_dir = lspconfig.util.root_pattern("pyproject.toml") })
-		lspconfig.rust_analyzer.setup({ root_dir = lspconfig.util.root_pattern("Cargo.toml") })
-		lspconfig.tailwindcss.setup({})
-		lspconfig.taplo.setup({})
-		lspconfig.tsserver.setup({ root_dir = lspconfig.util.root_pattern("package.json") })
-		lspconfig.yamlls.setup({})
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+		local setup_lspconfig = function(server, config)
+			lspconfig[server].setup(vim.tbl_deep_extend("force", {
+				capabilities = capabilities,
+			}, config))
+		end
+
+		setup_lspconfig("cssls", {})
+		setup_lspconfig("eslint", { root_dir = lspconfig.util.root_pattern("package.json") })
+		setup_lspconfig("html", {})
+		setup_lspconfig("htmx", { root_dir = lspconfig.util.root_pattern("package.json") })
+		setup_lspconfig("lua_ls", {
+			settings = { Lua = { diagnostics = { globals = { "vim" } } } },
+		})
+		setup_lspconfig("pyright", { root_dir = lspconfig.util.root_pattern("pyproject.toml") })
+		setup_lspconfig("quick_lint_js", {})
+		setup_lspconfig("ruff", { root_dir = lspconfig.util.root_pattern("pyproject.toml") })
+		setup_lspconfig("rust_analyzer", { root_dir = lspconfig.util.root_pattern("Cargo.toml") })
+		setup_lspconfig("tailwindcss", {})
+		setup_lspconfig("taplo", {})
+		setup_lspconfig("tsserver", { root_dir = lspconfig.util.root_pattern("package.json") })
+		setup_lspconfig("yamlls", {})
 	end,
 }

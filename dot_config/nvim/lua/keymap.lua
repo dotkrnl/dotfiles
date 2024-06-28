@@ -18,6 +18,8 @@ require("which-key").register({
 	},
 	-- toggle
 	t = {
+		C = { "<cmd>DiffviewClose<cr>", "Close diffview" },
+		D = { "<cmd>DiffviewOpen<cr>", "Open diffview" },
 		d = { "<cmd>Neotree toggle reveal<cr>", "Toggle NeoTree" },
 		t = { require("toggleterm").toggle, "Toggle terminal" },
 	},

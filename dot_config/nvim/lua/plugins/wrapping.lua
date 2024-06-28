@@ -15,15 +15,6 @@ return {
 				"tex",
 				"text",
 			},
-			set_nvim_opt_defaults = false,
-			softener = {
-				tex = function()
-					return true
-				end,
-				plaintex = function()
-					return true
-				end,
-			},
 		})
 	end,
 }

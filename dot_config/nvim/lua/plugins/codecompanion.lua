@@ -18,10 +18,11 @@ return {
 		require("codecompanion").setup({
 			adapters = {
 				anthropic = require("codecompanion.adapters").use("anthropic", {
-					env = {
-						api_key = "cmd:echo " .. vim.g.OpenAIKey,
-					},
-					schema = { model = { default = "claude-3-sonnet-20240229" } },
+					env = { api_key = "cmd:echo " .. vim.g.OpenAIKey },
+					schema = { model = { default = "claude-3-5-sonnet-20240620" } },
+				}),
+				openai = require("codecompanion.adapters").use("openai", {
+					env = { api_key = "cmd:echo " .. vim.g.OpenAIKey },
 				}),
 			},
 			strategies = {

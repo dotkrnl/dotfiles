@@ -5,7 +5,6 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	setup = function()
-		local lspconfig = require("lspconfig")
 		require("mason").setup({})
 		require("mason-lspconfig").setup({
 			ensure_installed = {
@@ -24,6 +23,8 @@ return {
 				"yamlls",
 			},
 		})
+
+		local lspconfig = require("lspconfig")
 		lspconfig.cssls.setup({})
 		lspconfig.eslint.setup({ root_dir = lspconfig.util.root_pattern("package.json") })
 		lspconfig.html.setup({})
@@ -37,6 +38,7 @@ return {
 		lspconfig.taplo.setup({})
 		lspconfig.tsserver.setup({ root_dir = lspconfig.util.root_pattern("package.json") })
 		lspconfig.yamlls.setup({})
+
 		vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
 		vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 	end,

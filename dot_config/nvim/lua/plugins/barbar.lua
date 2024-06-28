@@ -1,17 +1,22 @@
-vim.g.barbar_auto_setup = false
-
 return {
 	plugins = {
 		{
 			"romgrk/barbar.nvim",
 			dependencies = {
 				"lewis6991/gitsigns.nvim",
+				"nvim-tree/nvim-web-devicons",
 			},
+			init = function()
+				vim.g.barbar_auto_setup = false
+			end,
 		},
 	},
 	setup = function()
 		require("barbar").setup({
+			animation = true,
 			auto_hide = false,
+			tabpages = true,
+			clickable = true,
 		})
 	end,
 }

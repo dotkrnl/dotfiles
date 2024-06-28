@@ -6,7 +6,6 @@ return {
 		require("mini.ai").setup({})
 		require("mini.basics").setup({})
 		require("mini.comment").setup({})
-		require("mini.completion").setup({})
 		require("mini.diff").setup({})
 		require("mini.hipatterns").setup({
 			highlighters = {

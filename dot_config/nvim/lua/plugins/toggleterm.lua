@@ -12,14 +12,6 @@ return {
 			end,
 		})
 		vim.keymap.set("n", "tt", toggleterm.toggle, { silent = true })
-		vim.keymap.set("n", "tc", function()
-			local Terminal = require("toggleterm.terminal").Terminal
-			Terminal:new({
-				name = "GPT",
-				cmd = "sgpt --role General --repl temp",
-				direction = "vertical",
-			}):toggle()
-		end)
 		local opts = { buffer = 0 }
 		vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 		vim.keymap.set("t", "jk", [[<C-\><C-n>]], opts)

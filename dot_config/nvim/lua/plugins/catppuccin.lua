@@ -41,6 +41,7 @@ return {
 					},
 				},
 				neotree = true,
+        rainbow_delimiters = true,
 				telescope = {
 					enabled = true,
 				},

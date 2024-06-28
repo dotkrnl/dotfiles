@@ -1,5 +1,6 @@
 return {
 	plugins = {
+    "HiPhish/rainbow-delimiters.nvim",
 		"RRethy/vim-illuminate",
 		"dmadisetti/AirLatex.vim",
 		"dstein64/vim-startuptime",

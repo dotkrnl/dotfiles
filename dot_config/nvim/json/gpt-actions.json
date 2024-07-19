@@ -5,7 +5,7 @@
       "template": "You are a professional academic researcher. Please ensure this is (1) of professional quality for a top-tier conference, (2) informational, (3) without fancy words or unnecessary content, (4) concise, clear, and conveying, (5) coherent, logical, and fluent, and (6) uses terms correctly. Keep about the same length and the same format (including but not limited to markdown bullets, indents, LaTeX commands, and bracket positions, etc.). Avoid expanding abbreviations. Do not add additional information. DO NOT add prefix or suffix like 'here is the corrected text' or ```text blocks. Here is the input:\n\n{{input}}",
       "strategy": "append",
       "params": {
-        "model": "gpt-4o",
+        "model": "gpt-4-turbo",
         "temperature": 1
       }
     }
@@ -16,7 +16,7 @@
       "template": "Correct ONLY the grammar and awkward expressions with MINIMAL changes. Avoid expanding abbreviations. Keep the same format (including but not limited to markdown bullets, indents, LaTeX commands, and brackets, etc.). DO NOT add any other additional information. DO NOT add prefixes or suffixes like 'here is the corrected text' or ```text blocks. Here is the input:\n\n{{input}}",
       "strategy": "replace",
       "params": {
-        "model": "gpt-4o",
+        "model": "gpt-4-turbo",
         "temperature": 0
       }
     }
@@ -27,7 +27,7 @@
       "template": "Make this text concise without losing any information. Keep the same format (including but not limited to markdown bullets, indents, LaTeX commands, and brackets, etc.). DO NOT add prefix or suffix like 'here is the corrected text' or ```text blocks. Here is the input:\n\n{{input}}",
       "strategy": "append",
       "params": {
-        "model": "gpt-4o",
+        "model": "gpt-4-turbo",
         "temperature": 0
       }
     }

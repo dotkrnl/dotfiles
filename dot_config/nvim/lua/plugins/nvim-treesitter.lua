@@ -6,7 +6,7 @@ return {
 	setup = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = "all",
-			highlight = { enable = true },
+			highlight = { enable = false },
 		})
 		require("treesitter-context").setup({
 			enable = true,

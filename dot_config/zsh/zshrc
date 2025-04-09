@@ -11,7 +11,7 @@ if [ -d /opt/homebrew ]; then
 
   # Path to Homebrew's installed packages
   export PATH=/usr/local/bin:$PATH
-  export PATH=$HOME/Library/Python/3.12/bin:$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$HOMEBREW_PREFIX/opt/ruby/bin:$HOMEBREW_PREFIX/lib/ruby/gems/3.3.0/bin:$PATH
+  export PATH=$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$HOMEBREW_PREFIX/opt/ruby/bin:$HOMEBREW_PREFIX/lib/ruby/gems/3.3.0/bin:$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH
 
   # Disable safe fork mode so that Python does not crash
   export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES

@@ -19,7 +19,6 @@ return {
 				"rust_analyzer",
 				"tailwindcss",
 				"taplo",
-				"tsserver",
 				"yamlls",
 			},
 		})
@@ -46,7 +45,6 @@ return {
 		setup_lspconfig("rust_analyzer", { root_dir = lspconfig.util.root_pattern("Cargo.toml") })
 		setup_lspconfig("tailwindcss", {})
 		setup_lspconfig("taplo", {})
-		setup_lspconfig("tsserver", { root_dir = lspconfig.util.root_pattern("package.json") })
 		setup_lspconfig("yamlls", {})
 	end,
 }

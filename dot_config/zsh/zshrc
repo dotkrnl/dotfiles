@@ -1,4 +1,11 @@
-source /etc/profile
+########################
+# Local configurations #
+########################
+
+source /etc/zshrc
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
 
 #################################
 # macOS specific configurations #
@@ -40,6 +47,7 @@ alias pm="neomutt -F $HOME/.config/neomutt/accounts/protonmail.muttrc"
 alias rs="neomutt -F $HOME/.config/neomutt/accounts/rapidstream.muttrc"
 alias uc="neomutt -F $HOME/.config/neomutt/accounts/ucla.muttrc"
 
+alias cdiff="chezmoi diff"
 alias ccommit="chezmoi re-add; chezmoi git add .; chezmoi git commit"
 alias cpush="chezmoi git push"
 alias capply="chezmoi update --apply"
